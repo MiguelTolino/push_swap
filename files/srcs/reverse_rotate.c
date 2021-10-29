@@ -1,46 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 11:08:58 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/10/29 12:53:11 by mmateo-t         ###   ########.fr       */
+/*   Created: 2021/10/29 12:25:40 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/10/29 12:44:51 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int sa(s_stack *a)
+int rra(s_stack *a)
 {
+	int i;
+	int n;
 	int aux;
 
-	if (a->len <= 1 || !*a->stack)
-		return(0);
-	aux = a->stack[0];
-	a->stack[0] = a->stack[1];
-	a->stack[1] = aux;
-	print("sa\n");
+	if (!a->stack[0])
+		return (0);
+	i = a->len - 1;
+	n = a->stack[a->len - 1];
+	while (i > 0)
+	{
+		a->stack[i] = a->stack[i - 1];
+		i--;
+	}
+	a->stack[0] = n;
+	print("rra\n");
 	return (1);
 }
 
-int sb(s_stack *b)
+int rrb(s_stack *b)
 {
+	int i;
+	int n;
 	int aux;
 
-	if (b->len <= 1 || !*b->stack)
-		return(0);
-	aux = b->stack[0];
-	b->stack[0] = b->stack[1];
-	b->stack[1] = aux;
-	print("sb\n");
+	if (!b->stack[0])
+		return (0);
+	i = b->len - 1;
+	n = b->stack[b->len - 1];
+	while (i > 0)
+	{
+		b->stack[i] = b->stack[i - 1];
+		i--;
+	}
+	b->stack[0] = n;
+	print("rrb\n");
 	return (1);
 }
 
-int ss(s_stack *a, s_stack *b)
+int rrr(s_stack *a, s_stack *b)
 {
-	if (sa(a) || sb(b))
-		print("ss\n");
+	if (!rra(a) && !rrb(b))
+		return(0);
 	return (1);
+
 }

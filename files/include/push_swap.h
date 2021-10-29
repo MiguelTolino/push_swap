@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:02:13 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/10/26 12:34:18 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/10/29 12:53:38 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,30 @@
 #include <unistd.h>
 #include "../lib/libft/libft.h"
 
+typedef struct s_stack
+{
+	int* stack;
+	int len;
+} s_stack;
+
+
+void print(char *command);
 void manage_errors(int argc, char **argv);
-int *format_arguments(char **argv);
-void test(int *a, int len);
+void format_arguments(char **argv, s_stack *a);
+void test(s_stack *a);
 int length(int *a);
+int sa(s_stack *a);
+int sb(s_stack *b);
+int ss(s_stack *a, s_stack *b);
+int pa(s_stack *a, s_stack *b);
+int pb(s_stack *a, s_stack *b);
+int ra(s_stack *a);
+int rb(s_stack *b);
+int rr(s_stack *a, s_stack *b);
+int rra(s_stack *a);
+int rrb(s_stack *b);
+int rrr(s_stack *a, s_stack *b);
+
+
 
 #endif

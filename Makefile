@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/24 16:04:19 by user42            #+#    #+#              #
-#    Updated: 2021/10/26 11:22:24 by mmateo-t         ###   ########.fr        #
+#    Updated: 2021/10/29 11:47:42 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ $(NAME): $(OBJS)
 $(%.o): $(%.c)
 		$(CC) -c $^ -o $@
 		@echo "Creating objects"
-
+		
 libft:
 		make -C $(LIBFT_PATH)
 

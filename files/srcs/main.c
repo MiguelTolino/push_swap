@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format.c                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:08:57 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/10/29 11:55:07 by mmateo-t         ###   ########.fr       */
+/*   Created: 2021/10/26 10:01:04 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/10/29 12:50:02 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void format_arguments(char **argv, s_stack *a)
-{
-	int i;
-	int len;
+/*
+- push_swap.h
+- compiling makefile
 
-	len = 0;
-	i = 1;
-	while (argv[i++])
-		len++;
-	a->stack = (int*)malloc(sizeof(int) * (len));
-	a->len = len;
-	i = 1;
-	while (argv[i])
-	{
-		a->stack[i - 1] = ft_atoi(argv[i]);
-		i++;
-	}
+
+PROGRAM
+-------
+- parse arguments to int
+- build operations
+- manage errors
+
+
+
+
+
+
+
+*/
+
+int main(int argc, char **argv)
+{
+	s_stack a;
+	s_stack b;
+
+	manage_errors(argc, argv);
+	format_arguments(argv, &a);
+	test(&a);
+	return (0);
 }
