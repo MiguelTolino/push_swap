@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:02:13 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/01 19:57:41 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/01 21:05:42 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_stack
 
 
 void print(char *command);
+int throw_error(char *str);
 void manage_errors(int argc, char **argv);
 void format_arguments(char **argv, s_stack *a);
 void test(s_stack *a);

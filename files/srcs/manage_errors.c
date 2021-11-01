@@ -6,11 +6,18 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/01 20:32:15 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/01 21:05:24 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int throw_error(char *str)
+{
+	write(3, str, ft_strlen(str));
+	write(2, str, ft_strlen(str));
+	exit(EXIT_FAILURE);
+}
 
 int repeated(char **argv, int i)
 {
@@ -28,13 +35,6 @@ int repeated(char **argv, int i)
 		j--;
 	}
 	return (0);
-}
-
-int throw_error(char *str)
-{
-	write(3, str, ft_strlen(str));
-	write(2, str, ft_strlen(str));
-	exit(EXIT_FAILURE);
 }
 
 void manage_errors(int argc, char **argv)
