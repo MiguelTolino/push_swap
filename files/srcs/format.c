@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:08:57 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/10/29 11:55:07 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/01 20:17:53 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void format_arguments(char **argv, s_stack *a)
 	i = 1;
 	while (argv[i++])
 		len++;
-	a->stack = (int*)malloc(sizeof(int) * (len));
+	a->stack = (int *)malloc(sizeof(int) * (len));
 	a->len = len;
 	i = 1;
 	while (argv[i])

@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:02:13 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/10/29 12:53:38 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/01 19:57:41 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "../lib/libft/libft.h"
+
+#define MAX_INT "2147483647"
+#define MIN_INT "-2147483648"
 
 typedef struct s_stack
 {
