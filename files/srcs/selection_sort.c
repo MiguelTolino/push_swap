@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   selection_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 10:01:04 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 19:08:54 by mmateo-t         ###   ########.fr       */
+/*   Created: 2021/11/02 18:59:59 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/02 19:07:05 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void init_b(s_stack *b)
+void selection(s_stack *a, s_stack *b)
 {
-	b->len = 0;
-	b->stack = NULL;
-}
+	int min;
+	int i;
 
-int main(int argc, char **argv)
-{
-	s_stack a;
-	s_stack b;
-
-	manage_errors(argc, argv);
-	format_arguments(argv, &a);
-	init_b(&b);
-	perform_algorithm(&a, &b);
-	//test(&a, &b);
-	//merge(a.stack, a.len);
- 	free(a.stack);
-	free(b.stack);
-	return (0);
+	while (a->len)
+	{
+		i = 0;
+		min = RAND_MAX;
+		while (i < a->len)
+		{
+			if (a->stack[i] < min)
+				min = a->stack[i];
+			i++;
+		}
+		while (a->stack[0] != min)
+			ra(a);
+		pb(a, b);
+	}
+	while (b->len)
+		pa(a, b);
 }

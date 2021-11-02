@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:02:13 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 09:37:08 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/02 19:07:13 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ int rr(s_stack *a, s_stack *b);
 int rra(s_stack *a);
 int rrb(s_stack *b);
 int rrr(s_stack *a, s_stack *b);
-void perform_algorithm(s_stack a, s_stack b);
+void perform_algorithm(s_stack *a, s_stack *b);
+void merge(int *array, int len);
+void selection(s_stack *a, s_stack *b);
 
 
 

@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 10:29:53 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 11:21:12 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/02 12:02:43 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,11 @@ int push(s_stack *a, s_stack *b)
 
 int pa(s_stack *a, s_stack *b)
 {
-	if(push(b, a))
+	int done;
+
+	if(done = push(b, a))
 		print("pa\n");
-	return (1);
+	return (done);
 }
 
 int pb(s_stack *a, s_stack *b)
