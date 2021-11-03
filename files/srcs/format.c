@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:08:57 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 19:31:29 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:20:24 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,28 @@ int check_min_int(char *num)
 	return (0);
 }
 
-void format_arguments(char **argv, s_stack *a)
+void format_arguments(char **num, s_stack *a, int argc)
 {
 	int i;
 	int len;
+	int fix;
 
+	if (argc == 2)
+		fix = 0;
+	else
+		fix = 1;
 	len = 0;
-	i = 1;
-	while (argv[i++])
+	i = fix;
+	while (num[i++])
 		len++;
 	a->stack = (int *)malloc(sizeof(int) * (len));
 	a->len = len;
-	i = 1;
-	while (argv[i])
+	i = fix;
+	while (num[i])
 	{
-		check_max_int(argv[i]);
-		check_min_int(argv[i]);
-		a->stack[i - 1] = ft_atoi(argv[i]);
+		check_max_int(num[i]);
+		check_min_int(num[i]);
+		a->stack[i - fix] = ft_atoi(num[i]);
 		i++;
 	}
 }

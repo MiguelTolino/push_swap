@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:01:04 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/03 10:15:38 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:24:42 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ int main(int argc, char **argv)
 {
 	s_stack a;
 	s_stack b;
+	char **num;
 
-	manage_errors(argc, argv);
-	format_arguments(argv, &a);
+	num = manage_errors(argc, argv);
+	format_arguments(num, &a, argc);
 	init_b(&b);
 	perform_algorithm(&a, &b);
 	//test(&a, &b);
-	//merge(a.stack, a.len);
  	free(a.stack);
 	free(b.stack);
 	return (0);

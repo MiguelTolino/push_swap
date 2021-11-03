@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:02:13 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 19:07:13 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:11:29 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ typedef struct s_stack
 
 void print(char *command);
 int throw_error(char *str);
-void manage_errors(int argc, char **argv);
-void format_arguments(char **argv, s_stack *a);
+char **manage_errors(int argc, char **argv);
+void format_arguments(char **argv, s_stack *a, int argc);
 void test(s_stack *a, s_stack *b);
 int length(int *a);
 int sa(s_stack *a);
@@ -48,6 +48,7 @@ int rrr(s_stack *a, s_stack *b);
 void perform_algorithm(s_stack *a, s_stack *b);
 void merge(int *array, int len);
 void selection(s_stack *a, s_stack *b);
+int is_ordered(s_stack *a);
 
 
 
