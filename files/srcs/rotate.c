@@ -6,17 +6,11 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 12:18:06 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/10/29 12:47:21 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/02 19:32:03 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-//TODO: 1º Save a[0]
-/*
-	2º Rotate A
-	3º Set a[len - 1] = a[0]
-*/
 
 int ra(s_stack *a)
 {

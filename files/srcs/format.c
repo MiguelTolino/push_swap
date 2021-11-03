@@ -6,11 +6,13 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:08:57 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 10:40:34 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/02 19:31:29 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+//TODO: Env var must be passed ($ARG)
 
 int check_max_int(char *num)
 {
