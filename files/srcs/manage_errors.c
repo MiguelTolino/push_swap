@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/03 12:08:02 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:32:33 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int throw_error(char *str)
 	exit(EXIT_FAILURE);
 }
 
-int repeated(char **num, int i, int fix)	//FIXME
+int repeated(char **num, int i, int fix)
 {
 	int j;
 	int len1;
