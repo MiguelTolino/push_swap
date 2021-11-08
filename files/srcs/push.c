@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 10:29:53 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 12:02:43 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/08 22:45:59 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int push(s_stack *a, s_stack *b)
+int	push(s_stack *a, s_stack *b)
 {
-	s_stack new_a;
-	s_stack new_b;
-	int i;
+	s_stack	new_a;
+	s_stack	new_b;
+	int		i;
 
 	if (!a->stack[0])
 		return (0);
@@ -44,20 +44,22 @@ int push(s_stack *a, s_stack *b)
 	return (1);
 }
 
-int pa(s_stack *a, s_stack *b)
+int	pa(s_stack *a, s_stack *b)
 {
-	int done;
+	int	done;
 
-	if(done = push(b, a))
+	done = push(b, a);
+	if (done)
 		print("pa\n");
 	return (done);
 }
 
-int pb(s_stack *a, s_stack *b)
+int	pb(s_stack *a, s_stack *b)
 {
-	int done;
+	int	done;
 
-	if (done = push(a, b))
+	done = push(a, b);
+	if (done)
 		print("pb\n");
-	return(done);
+	return (done);
 }

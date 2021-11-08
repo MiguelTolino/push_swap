@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:21:55 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 11:25:43 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/08 22:46:15 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void print_stacks(s_stack *a)
+void	print_stacks(s_stack *a)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	printf("S -> ");
@@ -25,7 +25,7 @@ void print_stacks(s_stack *a)
 	printf("\n");
 }
 
-void test(s_stack *a, s_stack *b)
+void	test(s_stack *a, s_stack *b)
 {
 	print_stacks(a);
 	printf("\n");

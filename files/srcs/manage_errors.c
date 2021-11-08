@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   manage_errors.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/03 12:32:33 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/08 22:33:17 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int throw_error(char *str)
+int	throw_error(char *str)
 {
 	write(3, str, ft_strlen(str));
 	write(2, str, ft_strlen(str));
 	exit(EXIT_FAILURE);
 }
 
-int repeated(char **num, int i, int fix)
+int	repeated(char **num, int i, int fix)
 {
-	int j;
-	int len1;
-	int len2;
+	int	j;
+	int	len1;
+	int	len2;
 
 	len1 = ft_strlen(num[i]);
 	j = i - 1;
@@ -37,12 +37,12 @@ int repeated(char **num, int i, int fix)
 	return (0);
 }
 
-char **manage_errors(int argc, char **argv)
+char	**manage_errors(int argc, char **argv)
 {
-	int i;
-	int j;
-	char **num;
-	int fix;
+	int		i;
+	int		j;
+	char	**num;
+	int		fix;
 
 	i = 1;
 	fix = 1;

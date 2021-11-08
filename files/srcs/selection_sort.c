@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   selection_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:59:59 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/03 12:25:24 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/08 22:44:25 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void selection(s_stack *a, s_stack *b)
+void	selection(s_stack *a, s_stack *b)
 {
-	int min;
-	int index;
-	int i;
+	int	min;
+	int	index;
+	int	i;
 
 	while (a->len && !is_ordered(a))
 	{
@@ -32,11 +32,13 @@ void selection(s_stack *a, s_stack *b)
 			i++;
 		}
 		while (a->stack[0] != min)
+		{
 			if (index <= a->len / 2)
 				ra(a);
 			else
 				rra(a);
-		pb(a, b);
+			pb(a, b);
+		}
 	}
 	while (b->len)
 		pa(a, b);
