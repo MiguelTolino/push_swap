@@ -6,28 +6,32 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:21:55 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 13:14:19 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 17:20:18 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	print_stacks(t_stack *a)
+void	print_stacks(t_stack *new, char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	printf("S -> ");
-	while (i < a->len)
+	printf("%s ->[", str);
+	while (i < new->len)
 	{
-		printf("%i ", a->stack[i++]);
+		if (i == new->len - 1)
+			printf("%i]", new->stack[i]);
+		else
+			printf("%i ", new->stack[i]);
+		i++;
 	}
 	printf("\n");
 }
 
 void	test(t_stack *a, t_stack *b)
 {
-	print_stacks(a);
+	print_stacks(a, "A");
+	print_stacks(b, "B");
 	printf("\n");
-	print_stacks(b);
 }

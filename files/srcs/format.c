@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:08:57 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 16:42:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 int	check_max_int(char *num)
 {
 	if (num[0] != '-' && num[1] != '1' && ft_atoi(num) == -1)
-		throw_error("Number is greater than an integer value");
+		throw_error();
 	return (0);
 }
 
 int	check_min_int(char *num)
 {
 	if (num[0] != '0' && !ft_atoi(num))
-		throw_error("Number is lower than an integer value");
+		throw_error();
 	return (0);
 }
 
