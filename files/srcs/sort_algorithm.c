@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:03:21 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 21:33:03 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 21:37:47 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	middle_sorting(t_stack *a, t_stack *b)
 	{
 		i = 0;
 		n = a->stack[0];
-		printf("N:%i", n);
 		while (i < a->len - 1)
 		{
 			if (a->stack[i + 1] < n)
