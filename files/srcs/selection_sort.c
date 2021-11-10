@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:59:59 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 20:39:40 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 21:24:37 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	selection(t_stack *a, t_stack *b)
 	while (a->len && !is_ordered(a))
 	{
 		i = 0;
-		min = RAND_MAX;
+		min = __INT32_MAX__;
 		while (i < a->len)
 		{
 			if (a->stack[i] < min)
