@@ -6,13 +6,13 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:59:59 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/09 23:32:28 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	selection(s_stack *a, s_stack *b)
+void	selection(t_stack *a, t_stack *b)
 {
 	int	min;
 	int	index;

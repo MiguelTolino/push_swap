@@ -6,16 +6,16 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 10:29:53 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:45:59 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	push(s_stack *a, s_stack *b)
+int	push(t_stack *a, t_stack *b)
 {
-	s_stack	new_a;
-	s_stack	new_b;
+	t_stack	new_a;
+	t_stack	new_b;
 	int		i;
 
 	if (!a->stack[0])
@@ -44,7 +44,7 @@ int	push(s_stack *a, s_stack *b)
 	return (1);
 }
 
-int	pa(s_stack *a, s_stack *b)
+int	pa(t_stack *a, t_stack *b)
 {
 	int	done;
 
@@ -54,7 +54,7 @@ int	pa(s_stack *a, s_stack *b)
 	return (done);
 }
 
-int	pb(s_stack *a, s_stack *b)
+int	pb(t_stack *a, t_stack *b)
 {
 	int	done;
 

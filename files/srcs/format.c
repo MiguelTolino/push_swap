@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:08:57 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:30:42 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_min_int(char *num)
 	return (0);
 }
 
-void	format_arguments(char **num, s_stack *a, int argc)
+void	format_arguments(char **num, t_stack *a, int argc)
 {
 	int	i;
 	int	len;

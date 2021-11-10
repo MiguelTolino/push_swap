@@ -6,13 +6,13 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 12:18:06 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:46:49 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ra(s_stack *a)
+int	ra(t_stack *a)
 {
 	int	i;
 	int	n;
@@ -31,7 +31,7 @@ int	ra(s_stack *a)
 	return (1);
 }
 
-int	rb(s_stack *b)
+int	rb(t_stack *b)
 {
 	int	i;
 	int	n;
@@ -50,7 +50,7 @@ int	rb(s_stack *b)
 	return (1);
 }
 
-int	rr(s_stack *a, s_stack *b)
+int	rr(t_stack *a, t_stack *b)
 {
 	if (!ra(a) && !rb(b))
 		return (0);

@@ -6,13 +6,13 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:08:58 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:40:37 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	sa(s_stack *a)
+int	sa(t_stack *a)
 {
 	int	aux;
 
@@ -25,7 +25,7 @@ int	sa(s_stack *a)
 	return (1);
 }
 
-int	sb(s_stack *b)
+int	sb(t_stack *b)
 {
 	int	aux;
 
@@ -38,7 +38,7 @@ int	sb(s_stack *b)
 	return (1);
 }
 
-int	ss(s_stack *a, s_stack *b)
+int	ss(t_stack *a, t_stack *b)
 {
 	if (sa(a) || sb(b))
 		print("ss\n");

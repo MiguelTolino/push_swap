@@ -6,13 +6,13 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:03:21 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:42:27 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:20:16 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	is_ordered(s_stack *a)
+int	is_ordered(t_stack *a)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	is_ordered(s_stack *a)
 	return (1);
 }
 
-void	short_sorting(s_stack *a)
+void	short_sorting(t_stack *a)
 {
 	while (!is_ordered(a))
 	{
@@ -43,10 +43,10 @@ void	short_sorting(s_stack *a)
 	}
 }
 
-void	perform_algorithm(s_stack *a, s_stack *b)
+void	perform_algorithm(t_stack *a, t_stack *b)
 {
 	if (a->len <= 3)
 		short_sorting(a);
 	else
-		selection(a, b);
+		radix(a, b);
 }
