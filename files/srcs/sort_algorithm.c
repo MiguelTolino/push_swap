@@ -6,15 +6,15 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:03:21 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 18:04:34 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:04:15 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	is_ordered(t_stack *a)
+int is_ordered(t_stack *a)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (i < a->len - 1)
@@ -26,28 +26,56 @@ int	is_ordered(t_stack *a)
 	return (1);
 }
 
-void	short_sorting(t_stack *a)
+void short_sorting(t_stack *a)
 {
 	while (!is_ordered(a))
 	{
 		if (a->stack[0] > a->stack[1] && a->stack[0] < a->stack[2] && a->stack[1] < a->stack[2])
-			 sa(a);
+			sa(a);
 		else if (a->stack[0] < a->stack[1] && a->stack[0] > a->stack[2] && a->stack[1] > a->stack[2])
-			 rra(a);
+			rra(a);
 		else if (a->stack[0] < a->stack[1] && a->stack[0] < a->stack[2] && a->stack[1] > a->stack[2])
-			 rra(a);
+			rra(a);
 		else if (a->stack[0] > a->stack[1] && a->stack[0] > a->stack[2] && a->stack[1] < a->stack[2])
-			 ra(a);
+			ra(a);
 		else if (a->stack[0] > a->stack[1] && a->stack[0] > a->stack[2] && a->stack[1] > a->stack[2])
-			 sa(a);
+			sa(a);
 	}
 }
 
-void	perform_algorithm(t_stack *a, t_stack *b)
+void middle_sorting(t_stack *a, t_stack *b)
+{
+	int i;
+	int n;
+
+	while (a->len > 3)
+	{
+		i = 0;
+		n = a->stack[0];
+		while (i < a->len - 1)
+		{
+			if (a->stack[i + 1] < n)
+				n = a->stack[i + 1];
+			i++;
+		}
+		while (a->stack[0] != n)
+		{
+			ra(a);
+		}
+		pb(a, b);
+	}
+	short_sorting(a);
+	pa(a, b);
+	pa(a, b);
+}
+
+void perform_algorithm(t_stack *a, t_stack *b)
 {
 	if (a->len <= 3)
 		short_sorting(a);
- 	else if(a->len <= 10)
+	else if (a->len <= 5)
+		middle_sorting(a, b);
+	else if (a->len <= 50)
 		selection(a, b);
 	else
 		radix(a, b);
