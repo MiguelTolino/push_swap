@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 20:31:24 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 21:18:00 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,7 @@ char	**manage_errors(int argc, char **argv)
 
 	i = 1;
 	fix = 1;
-	if (argc < 2)
-		throw_error();
-	else if (argc == 2)
+	if (argc == 2)
 	{
 		num = ft_split(argv[1], ' ');
 		i = 0;
