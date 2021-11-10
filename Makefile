@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/24 16:04:19 by user42            #+#    #+#              #
-#    Updated: 2021/11/10 16:23:34 by mmateo-t         ###   ########.fr        #
+#    Updated: 2021/11/10 20:51:07 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,6 @@ $(%.o): $(%.c)
 libft:
 		make -C $(LIBFT_PATH)
 
-debug: $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-
 clean:
 		@echo "Removing objects"
 		$(RM) $(OBJS)
@@ -56,4 +53,4 @@ re:
 	make fclean all
 	@echo "All files has been deleted and recompiled"
 
-.PHONY: clean fclean all re objects debug bonus
+.PHONY: clean fclean all re objects

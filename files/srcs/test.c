@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:21:55 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 17:20:18 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:06:25 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_stacks(t_stack *new, char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	printf("%s ->[", str);

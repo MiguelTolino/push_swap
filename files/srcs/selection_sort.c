@@ -6,11 +6,22 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:59:59 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:39:40 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	move(t_stack *a, int min, int index)
+{
+	while (a->stack[0] != min)
+	{
+		if (index < a->len / 2)
+			ra(a);
+		else
+			rra(a);
+	}
+}
 
 void	selection(t_stack *a, t_stack *b)
 {
@@ -31,13 +42,7 @@ void	selection(t_stack *a, t_stack *b)
 			}
 			i++;
 		}
-		while (a->stack[0] != min)
-		{
-			if (index < a->len / 2)
-				ra(a);
-			else
-				rra(a);
-		}
+		move(a, min, index);
 		pb(a, b);
 	}
 	while (b->len)
