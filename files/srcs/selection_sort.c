@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:59:59 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:44:25 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/09 23:32:28 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ void	selection(s_stack *a, s_stack *b)
 		}
 		while (a->stack[0] != min)
 		{
-			if (index <= a->len / 2)
+			if (index < a->len / 2)
 				ra(a);
 			else
 				rra(a);
-			pb(a, b);
 		}
+		pb(a, b);
 	}
 	while (b->len)
 		pa(a, b);

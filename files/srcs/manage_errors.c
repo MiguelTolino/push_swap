@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:33:17 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/09 23:18:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**manage_errors(int argc, char **argv)
 		j = 0;
 		while (num[i][j])
 		{
-			if (ft_isdigit(num[i][j]) || num[i][j] == '-' && !j)
+			if (ft_isdigit(num[i][j]) || (num[i][j] == '-' && !j))
 				j++;
 			else
 				throw_error("Arguments' values incorrect");

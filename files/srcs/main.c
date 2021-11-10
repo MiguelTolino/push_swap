@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:01:04 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:32:25 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/09 23:29:17 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 	format_arguments(num, &a, argc);
 	init_b(&b);
 	perform_algorithm(&a, &b);
-	//test(&a, &b);
+	test(&a, &b);
 	free(a.stack);
 	free(b.stack);
 	return (0);
