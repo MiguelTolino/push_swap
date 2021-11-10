@@ -1,11 +1,19 @@
-# push_swap
+# 📌 push_swap
 This project involves sorting data on a stack, with a limited set of instructions, and the smallest number of moves. To make this happen, you will have to manipulate various sorting algorithms and choose the most appropriate solution(s) for optimized data sorting.
 
 The Push_swap project is a very simple and highly effective algorithm project: data will need to be sorted. You have at your disposal a set of int values, stacks and a set ofinstructions to manipulate both stacks.
-Your goal ? Write a program in C called push_swap which calculates and displays on the standard output the smallest program using Push_swap instruction language that sorts the integer arguments received.
 
-## Game rules
+## 🎮 Game rules 
 
+The game is composed of 2 stacks named a and b.
+
+- To start with:
+  - ***a*** contains a random number of either positive or negative numbers without any duplicates.
+  - ***b*** is empty.
+
+The goal is to sort in ascending order numbers into stack a.
+
+To do this you have the following operations at your disposal:
 - **sa**: (*swap a*) - swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
 - **sb**: (*swap b*) - swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.
 - **ss**: sa and sb at the same time.
@@ -18,10 +26,10 @@ Your goal ? Write a program in C called push_swap which calculates and displays 
 - **rrb**: (*reverse rotate b*) - shift down all elements of stack b by 1. The last element becomes the first one.
 - **rrr**: rra and rrb at the same time.
 
-## Compilation
+## 💻 Compilation
 
 Compile push_swap: `make`
 
-## Execute
+## ❗ Execute
 
 push_swap: `./push_swap 0 2 3 1`
