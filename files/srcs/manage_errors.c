@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 16:32:14 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:31:24 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@ int	throw_error(void)
 	write(3, "Error", ft_strlen("Error"));
 	write(2, "Error", ft_strlen("Error"));
 	exit(EXIT_FAILURE);
+}
+
+void	check_digits(char *num, int fix)
+{
+	int	j;
+
+	j = 0;
+	while (num[j])
+	{
+		if (ft_isdigit(num[j]) || (num[j] == '-' && !j))
+			j++;
+		else
+			throw_error();
+	}
 }
 
 int	repeated(char **num, int i, int fix)
@@ -58,14 +72,7 @@ char	**manage_errors(int argc, char **argv)
 		num = argv;
 	while (num[i])
 	{
-		j = 0;
-		while (num[i][j])
-		{
-			if (ft_isdigit(num[i][j]) || (num[i][j] == '-' && !j))
-				j++;
-			else
-				throw_error();
-		}
+		check_digits(num[i], fix);
 		if (repeated(num, i, fix))
 			throw_error();
 		i++;
