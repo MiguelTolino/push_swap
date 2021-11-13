@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:03:21 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 21:37:47 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 22:03:10 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	perform_algorithm(t_stack *a, t_stack *b)
 		short_sorting(a);
 	else if (a->len <= 5)
 		middle_sorting(a, b);
-	else if (a->len <= 50)
+	else if (a->len <= 100)
 		selection(a, b);
 	else
 		radix(a, b);

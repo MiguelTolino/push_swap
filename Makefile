@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/24 16:04:19 by user42            #+#    #+#              #
-#    Updated: 2021/11/10 20:51:07 by mmateo-t         ###   ########.fr        #
+#    Updated: 2021/11/11 13:57:58 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS := $(wildcard $(SRCS_DIR)*.c)
 OBJS := $(SRCS:%.c=%.o)
 NAME:= push_swap
 CC:= gcc
-#CFLAGS:= -Wall -Werror -Wextra
+CFLAGS:= -Wall -Werror -Wextra
 LIBFT_PATH:= files/lib/libft
 LIBFT_LIB:= -L$(LIBFT_PATH) $(LIBFT_PATH)/libft.a
 RM :=	rm -rvf
