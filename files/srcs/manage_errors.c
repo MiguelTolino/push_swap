@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 21:18:00 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:20:46 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	throw_error(void)
 	exit(EXIT_FAILURE);
 }
 
-void	check_digits(char *num, int fix)
+void	check_digits(char *num)
 {
 	int	j;
 
@@ -54,7 +54,6 @@ int	repeated(char **num, int i, int fix)
 char	**manage_errors(int argc, char **argv)
 {
 	int		i;
-	int		j;
 	char	**num;
 	int		fix;
 
@@ -70,7 +69,7 @@ char	**manage_errors(int argc, char **argv)
 		num = argv;
 	while (num[i])
 	{
-		check_digits(num[i], fix);
+		check_digits(num[i]);
 		if (repeated(num, i, fix))
 			throw_error();
 		i++;

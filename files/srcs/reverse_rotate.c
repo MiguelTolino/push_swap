@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 12:25:40 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 12:41:44 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:30:08 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	rra(t_stack *a)
 {
 	int	i;
 	int	n;
-	int	aux;
 
 	if (!a->stack[0])
 		return (0);
@@ -36,7 +35,6 @@ int	rrb(t_stack *b)
 {
 	int	i;
 	int	n;
-	int	aux;
 
 	if (!b->stack[0])
 		return (0);
