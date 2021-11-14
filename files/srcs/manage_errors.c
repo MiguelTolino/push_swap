@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:11:20 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/13 14:20:46 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:58:34 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	throw_error(void)
 {
-	write(3, "Error", ft_strlen("Error"));
 	write(2, "Error", ft_strlen("Error"));
 	exit(EXIT_FAILURE);
 }
