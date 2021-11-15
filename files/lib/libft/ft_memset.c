@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/05 13:12:26 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:43:38 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
+	ptr = (unsigned char *)b;
+	while (i < len)
+	{
+		*ptr = (unsigned char)c;
 		i++;
-	return (i);
+		ptr++;
+	}
+	return (b);
 }

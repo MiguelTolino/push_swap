@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/05 13:33:22 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:43:17 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
+#include "libft.h"
+
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*ptr;
+	unsigned char	*ptr2;
 
 	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
+	ptr = (unsigned char *)src;
+	ptr2 = (unsigned char *)dst;
+	while (i < n)
+	{
+		*ptr2 = *ptr;
+		if (*ptr == (unsigned char)c)
+		{
+			dst += i + 1;
+			return (dst);
+		}
 		i++;
-	return (i);
+		ptr++;
+		ptr2++;
+	}
+	dst = NULL;
+	return (dst);
 }

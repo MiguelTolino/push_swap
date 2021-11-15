@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/06 16:42:55 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:45:35 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
-		i++;
-	return (i);
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+		{
+			return ((char *)(s + i));
+		}
+		i--;
+	}
+	s = NULL;
+	return ((char *)s);
 }

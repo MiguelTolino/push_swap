@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/25 19:18:44 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:49:45 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
-		i++;
-	return (i);
+int	ft_lstsize(t_list *lst)
+{
+	int	counter;
+
+	counter = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		counter++;
+		lst = lst->next;
+	}
+	return (counter);
 }

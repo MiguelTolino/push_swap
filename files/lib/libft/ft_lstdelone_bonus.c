@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/27 18:24:41 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:39:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
-		i++;
-	return (i);
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }

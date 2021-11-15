@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 12:08:33 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/03 10:50:14 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/08 22:41:25 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void print(char *command)
+void	print(char *command)
 {
 	write(1, command, ft_strlen(command));
 }

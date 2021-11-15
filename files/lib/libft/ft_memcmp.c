@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/06 14:14:24 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:39:09 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t					i;
+	unsigned const char		*ptr;
+	unsigned const char		*ptr2;
 
 	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
+	ptr = (unsigned const char *)s1;
+	ptr2 = (unsigned const char *)s2;
+	while (i < n)
+	{
+		if (*ptr != *ptr2)
+		{
+			return ((int)(*ptr - *ptr2));
+		}
+		ptr++;
+		ptr2++;
 		i++;
-	return (i);
+	}
+	return (0);
 }

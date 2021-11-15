@@ -3,20 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 10:29:53 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/02 12:02:43 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:36:56 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int push(s_stack *a, s_stack *b)
+void	rebuild_stack(t_stack *new_a, t_stack *new_b, t_stack *a, t_stack *b)
 {
-	s_stack new_a;
-	s_stack new_b;
-	int i;
+	int	i;
+
+	i = 0;
+	while (i < new_a->len)
+	{
+		new_a->stack[i] = a->stack[i + 1];
+		i++;
+	}
+	i = 1;
+	while (i < new_b->len)
+	{
+		new_b->stack[i] = b->stack[i - 1];
+		i++;
+	}
+}
+
+int	push(t_stack *a, t_stack *b)
+{
+	t_stack	new_a;
+	t_stack	new_b;
 
 	if (!a->stack[0])
 		return (0);
@@ -25,18 +42,7 @@ int push(s_stack *a, s_stack *b)
 	new_b.len = b->len + 1;
 	new_a.len = a->len - 1;
 	new_a.stack = (int *)malloc(sizeof(int) * (new_a.len));
-	i = 0;
-	while (i < new_a.len)
-	{
-		new_a.stack[i] = a->stack[i + 1];
-		i++;
-	}
-	i = 1;
-	while (i < new_b.len)
-	{
-		new_b.stack[i] = b->stack[i - 1];
-		i++;
-	}
+	rebuild_stack(&new_a, &new_b, a, b);
 	free(a->stack);
 	free(b->stack);
 	*a = new_a;
@@ -44,20 +50,22 @@ int push(s_stack *a, s_stack *b)
 	return (1);
 }
 
-int pa(s_stack *a, s_stack *b)
+int	pa(t_stack *a, t_stack *b)
 {
-	int done;
+	int	done;
 
-	if(done = push(b, a))
+	done = push(b, a);
+	if (done)
 		print("pa\n");
 	return (done);
 }
 
-int pb(s_stack *a, s_stack *b)
+int	pb(t_stack *a, t_stack *b)
 {
-	int done;
+	int	done;
 
-	if (done = push(a, b))
+	done = push(a, b);
+	if (done)
 		print("pb\n");
-	return(done);
+	return (done);
 }

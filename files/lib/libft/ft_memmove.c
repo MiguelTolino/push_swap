@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   length.c                                           :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:30:25 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/08 22:31:16 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/05 13:59:48 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:43:42 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(int *a)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	if (!a)
-		return (-1);
-	while (a[i] != '\0')
-		i++;
-	return (i);
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	unsigned char	*ptr;
+	unsigned char	*ptr2;
+
+	ptr = (unsigned char *)src;
+	ptr2 = (unsigned char *)dst;
+	if (ptr2 > ptr)
+	{
+		while (len--)
+			ptr2[len] = ptr[len];
+	}
+	else
+		ft_memcpy(ptr2, ptr, len);
+	return (dst);
 }

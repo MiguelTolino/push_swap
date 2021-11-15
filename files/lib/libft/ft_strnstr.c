@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 12:21:55 by mmateo-t          #+#    #+#             */
-/*   Updated: 2021/11/10 20:06:25 by mmateo-t         ###   ########.fr       */
+/*   Created: 2019/11/06 17:31:51 by mmateo-t          #+#    #+#             */
+/*   Updated: 2021/11/08 16:36:44 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "libft.h"
+#include <stdio.h>
 
-void	print_stacks(t_stack *new, char *str)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
+	char	*big;
+	char	*little;
 
+	big = (char *)haystack;
+	little = (char *)needle;
 	i = 0;
-	printf("%s ->[", str);
-	while (i < new->len)
+	if (*little == '\0')
+		return (big);
+	while (big[i] && i < len)
 	{
-		if (i == new->len - 1)
-			printf("%i]", new->stack[i]);
-		else
-			printf("%i ", new->stack[i]);
+		j = 0;
+		while (big[i + j] == little[j] && little[j] && (i + j) < len)
+		{
+			j++;
+		}
+		if (little[j] == '\0')
+			return (big + i);
 		i++;
 	}
-	printf("\n");
-}
-
-void	test(t_stack *a, t_stack *b)
-{
-	print_stacks(a, "A");
-	print_stacks(b, "B");
-	printf("\n");
+	return (NULL);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
+#    By: mmateo-t <mmateo-t@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/24 16:04:19 by user42            #+#    #+#              #
-#    Updated: 2021/10/29 11:47:42 by mmateo-t         ###   ########.fr        #
+#    Updated: 2021/11/11 13:57:58 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS := $(wildcard $(SRCS_DIR)*.c)
 OBJS := $(SRCS:%.c=%.o)
 NAME:= push_swap
 CC:= gcc
-#CFLAGS:= -Wall -Werror -Wextra
+CFLAGS:= -Wall -Werror -Wextra
 LIBFT_PATH:= files/lib/libft
 LIBFT_LIB:= -L$(LIBFT_PATH) $(LIBFT_PATH)/libft.a
 RM :=	rm -rvf
@@ -40,9 +40,6 @@ $(%.o): $(%.c)
 libft:
 		make -C $(LIBFT_PATH)
 
-debug: $(OBJS)
-	$(CC) $(DEBUG_FLAG) $(CFLAGS) $(OBJS) -o $(NAME)
-
 clean:
 		@echo "Removing objects"
 		$(RM) $(OBJS)
@@ -56,4 +53,4 @@ re:
 	make fclean all
 	@echo "All files has been deleted and recompiled"
 
-.PHONY: clean fclean all re objects debug bonus
+.PHONY: clean fclean all re objects
